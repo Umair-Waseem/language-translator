@@ -1,0 +1,32 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# App data
+translation_history.json
+
+# Build folders
+build/
+dist/
+*.egg-info/
+
+# TTS audio cache
+tts_cache/
+*.mp3
+*.wav
