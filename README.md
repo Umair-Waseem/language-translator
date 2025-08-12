@@ -1,243 +1,229 @@
-# Language Translator (CustomTkinter)
+# 🈯 Language Translator
 
-![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
-![GitHub Stars](https://img.shields.io/github/stars/your-username/language-translator?style=social)
-
-**Language Translator** is a **user-friendly desktop application** built with **Python** and **CustomTkinter**.  
-It goes beyond basic translations by offering grammar suggestions, translation confidence scoring, and text-to-speech support.
+A simple, friendly desktop application for translating text, checking grammar, listening to translations with Text-to-Speech (TTS), and keeping a translation history — all in one place. Built with Python and CustomTkinter for a modern, lightweight interface.
 
 ---
 
-## 📑 Table of Contents
-1. [Features](#-features)
-2. [Why Use It](#-why-use-it)
-3. [Screenshots](#-screenshots)
-4. [Requirements](#-requirements)
-5. [Project Structure](#-project-structure)
-6. [Installation](#-installation)
-7. [Running the App](#-running-the-app)
-8. [Usage Guide](#-usage-guide)
-9. [Keyboard Shortcuts](#-keyboard-shortcuts)
-10. [Customization](#-customization)
-11. [Troubleshooting](#-troubleshooting)
-12. [Privacy & License](#-privacy--license)
-13. [Tested Versions](#-tested-versions)
-14. [Contributing](#-contributing)
-15. [Acknowledgments](#-acknowledgments)
+## 🚀 Key Features
+
+* 🌐 **Automatic Language Detection** — Uses Google Translate and `langdetect`.
+* 📝 **Noun Mode** — Improves accuracy for single-word translations.
+* 📊 **Confidence Score** — Shows translation quality through back-translation.
+* 🧠 **Grammar Hints** — Provided by LanguageTool ([Java required](https://www.java.com/en/download/)).
+* 🔊 **Text-to-Speech (TTS)** — Listen to translations instantly.
+* 🎨 **Light/Dark Mode** — Switch themes easily.
+* 📜 **Translation History** — Save, reuse, or delete past translations.
 
 ---
 
-## ✨ Features
-- Detects the source language automatically using **Google Translate** and `langdetect`.
-- Enhances single-word translations with **Noun Mode**.
-- Provides translation confidence scoring via back-translation.
-- Offers grammar suggestions through **LanguageTool** *(Java required)*.
-- Supports Text-to-Speech (TTS) with **gTTS** and **pygame**.
-- Allows switching between Light and Dark themes.
-- Saves translation history with options to reuse or delete entries.
+## 💼 Best For
+
+* Learning new languages.
+* Quick translation of documents or messages.
+* Enhancing writing with grammar suggestions.
+* Keeping a personal vocabulary log.
+* Translating multilingual communications.
 
 ---
 
-## 💡 Why Use It
-This application is designed to do more than translate text:
-- Enhance single-word translation accuracy with **Noun Mode**.
-- Assess translation reliability with the **confidence score**.
-- Improve writing with **grammar suggestions**.
-- Listen to your translations with **TTS**.
-- Quickly revisit translations through the **history feature**.
+## ⚙️ Getting Started
 
----
+> **Requires Python 3.10 or later**
 
-## 📸 Screenshots
-*(Replace with actual screenshots before publishing)*
+### 1. Download the Project
 
-| Light Mode | Dark Mode |
-|------------|-----------|
-| ![Light Screenshot](screenshots/light.png) | ![Dark Screenshot](screenshots/dark.png) |
-
----
-
-## ✅ Requirements
-- **Python 3.10+**.
-- Stable internet connection (for translation & TTS).
-- **Java (JRE 8+)** for grammar checking.
-- Tkinter (included with Windows/macOS; install manually on Linux).
-
-#### Linux Tkinter installation:
 ```bash
-sudo apt install python3-tk
-📦 Project Structure
-arduino
-Copy
-Edit
-Language_Translator/
-├─ main.py
-├─ requirements.txt
-├─ README.md
-├─ .gitignore
-└─ translator_app/
-   ├─ __init__.py
-   ├─ config.py
-   ├─ language_support.py
-   ├─ state.py
-   └─ theme.py
-File Roles:
-
-main.py — Launches the application.
-
-config.py — Application constants and settings.
-
-theme.py — Manages Light/Dark theme styles.
-
-language_support.py — Supported languages and mappings.
-
-state.py — UI logic, events, and state management.
-
-🚀 Installation
-1. Clone the repository
-bash
-Copy
-Edit
-git clone https://github.com/your-username/language-translator.git
+git clone https://github.com/Umair-Waseem/language-translator
 cd language-translator
-2. Create a virtual environment (recommended)
-Windows (PowerShell):
+```
 
-powershell
-Copy
-Edit
-py -m venv .venv
-.venv\Scripts\Activate.ps1
-macOS / Linux:
+### 2. (Optional) Create a Virtual Environment
 
-bash
-Copy
-Edit
-python3 -m venv .venv
-source .venv/bin/activate
-3. Install dependencies
-bash
-Copy
-Edit
+```bash
+python -m venv venv
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+```
+
+### 3. Install Requirements
+
+```bash
 pip install --upgrade pip
 pip install -r requirements.txt
-4. Install Java (JRE 8+) for grammar checking
-Windows:
+```
 
-Download from Java Download Page.
+### 4. Install Java (JRE 8+) for Grammar Checking
 
-Install and restart your computer.
+**Windows**
 
-macOS:
+1. [Download Java](https://www.java.com/en/download/)
+2. Install Java and restart your computer.
 
-Download the .dmg from Java Download Page.
+**macOS**
 
-Install following the prompts.
+1. [Download Java installer](https://www.java.com/en/download/)
+2. Install Java.
 
-Linux (Debian/Ubuntu):
+**Linux (Debian/Ubuntu)**
 
-bash
-Copy
-Edit
+```bash
 sudo apt update
-sudo apt install default-jre
+sudo apt install -y default-jre
 java -version
-▶️ Running the App
-bash
-Copy
-Edit
+```
+
+### 5. (Linux only) Install Tkinter if Missing
+
+```bash
+sudo apt install -y python3-tk
+```
+
+---
+
+## ▶️ Run the App
+
+```bash
 python main.py
-When launched, the app displays:
+```
 
-Language selectors.
+When launched, the app will display:
 
-Input and output text areas.
+* Language selectors.
+* Input and output text boxes.
+* Buttons for Translate, Copy, History, and TTS.
+* A status bar with the confidence score.
 
-Buttons: Translate, Copy, History, and TTS.
+---
 
-A confidence score in the status bar.
+## 📁 Project Structure
 
-🧭 Usage Guide
-Enter text into the input box.
+```bash
+Language_Translator/
+├── main.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+└── translator_app/
+    ├── __init__.py
+    ├── config.py
+    ├── language_support.py
+    ├── state.py
+    └── theme.py
+```
 
-Select source and target languages, or choose Auto Detect.
+**File Roles**
 
-(Optional) Enable Noun Mode for single-word translations.
+* `main.py` — Runs the application.
+* `config.py` — Stores constants and settings.
+* `theme.py` — Manages Light/Dark themes.
+* `language_support.py` — Handles language mappings.
+* `state.py` — Manages UI logic and events.
 
-Click Translate.
+---
 
-Review the translation, confidence score, and grammar suggestions.
+## 🧩 Supported Features
 
-Use Copy, TTS, or History as needed.
+| Feature             | Description                                |
+| ------------------- | ------------------------------------------ |
+| Automatic Detection | Detects source language automatically.     |
+| Noun Mode           | Improves single-word translation accuracy. |
+| Grammar Checking    | Requires Java (JRE 8+).                    |
+| Confidence Score    | Shows translation quality.                 |
+| Text-to-Speech      | Plays translated text aloud.               |
+| Translation History | Saves and reuses translations.             |
 
-Toggle Light/Dark mode from the header.
+---
 
-⌨️ Keyboard Shortcuts
-Action	Shortcut
-Translate	Ctrl + T
-Swap languages	Ctrl + S
-Toggle theme	Ctrl + L
-Open history	Ctrl + H
-Toggle Noun Mode	Ctrl + N
+## 🖥️ How It Works
 
-⚙️ Customization
-Edit translator_app/config.py to change:
+1. Enter or paste text into the input box.
+2. Select source and target languages, or choose **Auto Detect**.
+3. (Optional) Turn on **Noun Mode** for single words.
+4. Click **Translate**.
+5. Review the translation, confidence score, and grammar hints.
+6. Use **Copy**, **TTS**, or **History**.
+7. Switch between Light and Dark mode as needed.
 
-Font styles and sizes.
+---
 
-Light/Dark color palettes.
+## ⌨️ Keyboard Shortcuts
 
-Maximum translation length and timeout settings.
+| Action           | Shortcut |
+| ---------------- | -------- |
+| Translate        | Ctrl + T |
+| Swap languages   | Ctrl + S |
+| Toggle theme     | Ctrl + L |
+| Open history     | Ctrl + H |
+| Toggle Noun Mode | Ctrl + N |
 
-Language groupings and context phrases.
+---
 
-🛠 Troubleshooting
-ModuleNotFoundError: translator_app → Ensure translator_app/__init__.py exists.
+## 📦 Required Libraries
 
-Grammar check not working → Install Java (JRE 8+) and restart the app.
+Install all libraries with:
 
-No sound from TTS → Check internet connection and audio output.
+```bash
+pip install -r requirements.txt
+```
 
-Timeout or network errors → Shorten input text or check your network.
+Main packages:
 
-Permission errors → Ensure the app has permission to write to translation_history.json.
+* `customtkinter`
+* `deep-translator`
+* `langdetect`
+* `language-tool-python`
+* `gTTS`
+* `pygame`
 
-🔒 Privacy & License
-Translations are stored locally in translation_history.json.
+---
 
-No personal data is collected.
+## 🪪 License
 
-Google APIs process text for translation and TTS.
+Licensed under the **MIT License**
 
-Licensed under the MIT License — see the LICENSE file for details.
+---
 
-🧪 Tested Versions
-Component	Version
-Python	3.11
-pygame	2.6.x
-customtkinter	5.2.x
-deep-translator	1.11.x
-langdetect	1.0.x
-language-tool-python	2.7.x
-gTTS	2.5.x
+## 🙏 Acknowledgments
 
-🤝 Contributing
-Contributions are welcome! Please:
+* [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) — Modern Tkinter styling.
+* [deep-translator](https://pypi.org/project/deep-translator/) — Translation API.
+* [LanguageTool](https://languagetool.org/) — Grammar checking.
+* [gTTS](https://pypi.org/project/gTTS/) — Text-to-Speech.
+* [pygame](https://www.pygame.org/) — Audio playback.
 
-Keep the UI simple and consistent.
+---
 
-Write clean, maintainable code.
+## ❓ Troubleshooting
 
-Focus on stability and incremental improvements.
+* **`ModuleNotFoundError: translator_app`** → Check `translator_app/__init__.py` exists.
+* **Grammar check not working** → Install Java and restart.
+* **No TTS sound** → Check speakers and internet.
+* **Network/timeout errors** → Try shorter text or check your connection.
+* **Permission errors** → Allow write access to `translation_history.json`.
 
-🙏 Acknowledgments
-CustomTkinter — Modern and customizable Tkinter framework.
+---
 
-deep-translator — Python package for multiple translation APIs.
+## 🖼️ Screenshots
 
-LanguageTool — Grammar and style checking tool.
+**Light Mode:**
 
-gTTS — Google Text-to-Speech API for Python.
+<img width="1920" height="1031" alt="image" src="https://github.com/user-attachments/assets/47abafee-591a-46e9-accc-c63b49bba061" />
 
-pygame — Python library for multimedia applications.
+---
+
+**Dark Mode:**
+
+<img width="1920" height="1037" alt="1231231212412412" src="https://github.com/user-attachments/assets/1935b0ea-ee3b-4603-aae4-78703f7fd21a" />
+
+---
+
+## 📬 Contact
+
+Questions or suggestions?
+
+* Open an issue on GitHub.
+* Email: `umairwaseem5.4.2003@gmail.com`
+
+> Made with ❤️ using Python — helping you translate smarter, faster, and easier.
