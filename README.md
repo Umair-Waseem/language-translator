@@ -209,13 +209,13 @@ Licensed under the **MIT License**
 
 **Light Mode:**
 
-<img width="1920" height="1031" alt="image" src="https://github.com/user-attachments/assets/47abafee-591a-46e9-accc-c63b49bba061" />
+<img width="1920" height="1031" alt="image" src="https://github.com/user-attachments/assets/75ca1210-2bcb-489c-bdad-0c6b3a83690e" />
 
 ---
 
 **Dark Mode:**
 
-<img width="1920" height="1037" alt="1231231212412412" src="https://github.com/user-attachments/assets/1935b0ea-ee3b-4603-aae4-78703f7fd21a" />
+<img width="1920" height="1037" alt="1231231212412412" src="https://github.com/user-attachments/assets/4b81044e-cdfc-4564-b3b0-7f32bdabeb7a" />
 
 ---
 
