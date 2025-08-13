@@ -44,7 +44,7 @@ from .theme import (
 from .language_support import initialize_language_support
 
 
-# --------------------- Global flags & locks (unchanged names) ---------------------
+# --------------------- Global flags & locks  ---------------------
 cancelled = False
 translation_lock = threading.Lock()
 translation_history = []
@@ -52,13 +52,13 @@ debounce_timer = None
 grammar_timer = None
 active_tooltip = None
 
-# --------------------- Initialize pygame (same place in lifecycle) ----------------
+# --------------------- Initialize pygame ----------------
 pygame.init()
 
-# --------------------- Thread pool (unchanged settings) --------------------------
+# --------------------- Thread pool--------------------------
 thread_pool = concurrent.futures.ThreadPoolExecutor(max_workers=4)
 
-# --------------------- Main application (same properties as original) ------------
+# --------------------- Main application ------------
 ctk.set_appearance_mode("System")
 ctk.set_default_color_theme("blue")
 app = ctk.CTk()
@@ -68,7 +68,7 @@ app.minsize(950, 600)
 app.grid_columnconfigure(0, weight=1)
 app.grid_rowconfigure(1, weight=1)
 
-# --------------------- Global UI references (preserve names; assigned later) -----
+# --------------------- Global UI references  -----
 header = None
 title_label = None
 subtitle_label = None
