@@ -17,7 +17,7 @@ HEADER_FONT = (FONT_FAMILY, FONT_SIZE + 2, "bold")  # Larger for headers
 HISTORY_FILE = "translation_history.json"
 MAX_HISTORY_SIZE = 100
 
-# Updated Color Scheme - Dark Mode (calm, professional)
+# Updated Color Scheme - Dark Mode 
 DARK_BG = "#1E1F29"
 DARK_TEXT = "#FFFFFF"
 DARK_BORDER = "#3A3D4D"
@@ -28,7 +28,7 @@ DARK_BUTTON_SECONDARY = "#26B3D2"
 DARK_BUTTON_DANGER = "#FF6E6E"
 DARK_HOVER = "#BD93F9"
 
-# Updated Color Scheme - Light Mode (pleasant, soothing)
+# Updated Color Scheme - Light Mode 
 LIGHT_BG = "#F8FAFC"
 LIGHT_TEXT = "#000000"
 LIGHT_BORDER = "#CBD5E0"
