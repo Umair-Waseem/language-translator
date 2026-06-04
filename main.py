@@ -1,5 +1,4 @@
 # main.py
-# Entry point for the modularized app.
 
 from translator_app.state import app, initialize_application
 
