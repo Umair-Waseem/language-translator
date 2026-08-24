@@ -1,0 +1,18 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# App runtime data
+translation_history.json
+tts_*.mp3
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
