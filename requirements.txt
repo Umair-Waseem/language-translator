@@ -1,0 +1,17 @@
+# GUI framework
+customtkinter
+
+# Translation
+deep-translator
+
+# Language detection
+langdetect
+
+# Grammar checking (requires Java)
+language-tool-python
+
+# Text-to-speech
+gTTS
+
+# Audio playback
+pygame
